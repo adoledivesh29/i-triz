@@ -33,8 +33,8 @@ const Contact = () => {
               <div className="icon-box orange"><Mail size={24} /></div>
               <div className="info-text">
                 <h3>Email</h3>
-                <p>info@brightacademy.com</p>
-                <p>support@brightacademy.com</p>
+                <p>info@itrizacademy.com</p>
+                <p>support@itrizacademy.com</p>
               </div>
             </div>
 
@@ -52,7 +52,7 @@ const Contact = () => {
             <div className="map-placeholder">
               <div className="map-marker">
                 <div className="marker-inner">
-                  <span className="logo-icon">B</span>
+                  <span className="logo-icon">i</span>
                 </div>
               </div>
               <div className="map-overlay">

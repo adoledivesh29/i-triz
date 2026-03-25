@@ -23,7 +23,7 @@ const Features = () => {
   return (
     <section className="features section-padding" id="features" ref={featuresRef}>
       <div className="container">
-        <h2 className="section-title text-center">Why Choose <span>Bright Academy</span></h2>
+        <h2 className="section-title text-center">Why Choose <span>i-Triz Academy</span></h2>
         <p className="section-subtitle text-center">We provide a unique learning experience that combines traditional values with modern methodology.</p>
         
         <div className="features-grid">

@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="container navbar-container">
         <div className="logo">
           <span className="logo-text">
-            <span>BRIGHT</span> ACADEMY
+            <span>i-Triz</span> Academy
           </span>
         </div>
 

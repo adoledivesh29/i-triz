@@ -22,7 +22,7 @@ const Hero = () => {
             Admission Open 2024-25
           </div>
           <h1 className="hero-title" ref={titleRef}>
-            BRIGHT <span>ACADEMY</span>
+            i-Triz <span>Academy</span>
           </h1>
           <p className="hero-subtitle">
             Empowering students with quality education, expert teachers, and a modern learning environment. Join us to shape a brighter future.

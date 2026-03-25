@@ -105,7 +105,7 @@ const TeacherModal = ({ teacher, isOpen, onClose }) => {
               <h3>Contact Information</h3>
               <div className="contact-link">
                 <Mail size={18} />
-                <span>{teacher?.name?.toLowerCase()?.replace(/\s+/g, '.')}@brightacademy.com</span>
+                <span>{teacher?.name?.toLowerCase()?.replace(/\s+/g, '.')}@itrizacademy.com</span>
               </div>
               <div className="contact-link">
                 <Phone size={18} />

@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container footer-container">
         <div className="footer-top">
           <div className="footer-brand">
-            <h2 className="logo">BRIGHT <span>ACADEMY</span></h2>
+            <h2 className="logo">i-Triz <span>Academy</span></h2>
             <p>Empowering students with quality education, expert teachers, and a modern learning environment since 2014.</p>
             <div className="social-links">
               <a href="#"><Facebook size={20} /></a>
@@ -41,7 +41,7 @@ const Footer = () => {
 
           <div className="footer-newsletter">
             <h3>Newsletter</h3>
-            <p>Subscribe to get the latest updates and news from Bright Academy.</p>
+            <p>Subscribe to get the latest updates and news from i-Triz Academy.</p>
             <form className="newsletter-form">
               <input type="email" placeholder="Your email address" required />
               <button type="submit" className="btn btn-primary">
@@ -52,7 +52,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2024 Bright Academy. All rights reserved.</p>
+          <p>&copy; 2024 i-Triz Academy. All rights reserved.</p>
           <div className="footer-bottom-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms & Conditions</a>
