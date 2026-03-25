@@ -1,0 +1,120 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.contact {
+  background: $bg-white;
+
+  .contact-container {
+    @include grid-layout(2, 60px);
+    align-items: center;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .contact-info {
+    @include grid-layout(2, 30px);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+      background: $bg-light;
+      padding: 24px;
+      border-radius: $radius-lg;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      @include soft-shadow;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .icon-box {
+        width: 48px;
+        height: 48px;
+        border-radius: $radius-md;
+        @include flex-center;
+        color: #fff;
+
+        &.blue { background: $gradient-blue; }
+        &.green { background: $gradient-green; }
+        &.orange { background: $gradient-orange; }
+        &.indigo { background: #6366f1; }
+      }
+
+      .info-text {
+        h3 {
+          font-size: 1.1rem;
+          margin-bottom: 5px;
+        }
+        p {
+          font-size: 0.9rem;
+          color: $text-muted;
+          margin-bottom: 2px;
+        }
+        .btn {
+          margin-top: 10px;
+          padding: 8px 16px;
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+
+  .contact-map {
+    .map-placeholder {
+      width: 100%;
+      height: 400px;
+      background: #e2e8f0;
+      border-radius: $radius-lg;
+      position: relative;
+      @include flex-center;
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+
+      // Simple map pattern
+      background-image: 
+        radial-gradient(circle at 2px 2px, rgba(0,0,0,0.05) 1px, transparent 0);
+      background-size: 30px 30px;
+
+      .map-marker {
+        width: 60px;
+        height: 60px;
+        background: rgba(37, 99, 235, 0.2);
+        border-radius: 50%;
+        @include flex-center;
+        animation: pulse 2s infinite;
+
+        .marker-inner {
+          width: 30px;
+          height: 30px;
+          background: $primary-blue;
+          border-radius: 50%;
+          border: 3px solid #fff;
+          @include flex-center;
+          color: #fff;
+          font-weight: 800;
+          font-size: 0.8rem;
+        }
+      }
+
+      .map-overlay {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 20px rgba(37, 99, 235, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+}

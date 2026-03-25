@@ -1,0 +1,86 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: $z-navbar;
+  transition: all 0.3s ease;
+  background: transparent;
+
+  &.scrolled {
+    padding: 15px 0;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: $shadow-soft;
+  }
+
+  .navbar-container {
+    @include flex-between;
+  }
+
+  .logo {
+    &-text {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: $text-dark;
+
+      span {
+        color: $primary-blue;
+      }
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 40px;
+
+    @include tablet {
+      display: none; // Hidden by default on mobile
+      &.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: $bg-white;
+        padding: 20px;
+        box-shadow: $shadow-md;
+        gap: 20px;
+        text-align: center;
+      }
+    }
+
+    li a {
+      font-weight: 500;
+      color: $text-dark;
+
+      &:hover {
+        color: $primary-blue;
+      }
+    }
+  }
+
+  .navbar-actions {
+    @include flex-center;
+    gap: 15px;
+
+    .join-btn {
+      @include tablet {
+        display: none;
+      }
+    }
+
+    .menu-toggle {
+      display: none;
+      @include tablet {
+        display: block;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

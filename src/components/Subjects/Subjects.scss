@@ -1,0 +1,81 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.subjects {
+  background: $bg-white;
+
+  .subjects-grid {
+    @include grid-layout(3, 40px);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .subject-card {
+    background: #fff;
+    border-radius: $radius-lg;
+    padding: 40px;
+    text-align: left;
+    @include soft-shadow;
+    @include card-hover;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+
+    .subject-icon {
+      width: 80px;
+      height: 80px;
+      @include flex-center;
+      border: 2px dashed;
+      border-radius: $radius-md;
+      margin-bottom: 30px;
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 15px;
+      color: $text-dark;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: $text-muted;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .subject-list {
+      margin-bottom: 30px;
+      li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: $text-dark;
+        margin-bottom: 10px;
+
+        .dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .btn-link {
+      font-weight: 700;
+      color: $primary-blue;
+      font-size: 1rem;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

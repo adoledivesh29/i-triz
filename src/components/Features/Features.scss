@@ -1,0 +1,51 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.features {
+  background: $bg-white;
+
+  .features-grid {
+    @include grid-layout(3, 30px);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .feature-card {
+    background: #fff;
+    border-radius: $radius-lg;
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    @include soft-shadow;
+    @include card-hover;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+
+    .feature-icon {
+      font-size: 2rem;
+      padding-bottom: 5px;
+      border-bottom: 2px solid;
+    }
+
+    .feature-info {
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 800;
+        margin-bottom: 10px;
+        color: $text-dark;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: $text-muted;
+        line-height: 1.5;
+      }
+    }
+  }
+}

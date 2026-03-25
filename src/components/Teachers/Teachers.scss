@@ -1,0 +1,86 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.teachers {
+  background: $bg-light;
+
+  .teachers-grid {
+    @include grid-layout(3, 30px);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .teacher-card {
+    background: $bg-white;
+    border-radius: $radius-lg;
+    padding: 30px;
+    text-align: center;
+    @include soft-shadow;
+    @include card-hover;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+
+    .teacher-header {
+      position: relative;
+      margin-bottom: 20px;
+      @include flex-center;
+
+      .teacher-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        @include flex-center;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 800;
+        box-shadow: $shadow-md;
+      }
+
+      .teacher-badge {
+        position: absolute;
+        top: 0;
+        right: 20%;
+        background: $accent-orange;
+        color: #fff;
+        font-size: 0.7rem;
+        font-weight: 700;
+        padding: 4px 8px;
+        border-radius: $radius-sm;
+        text-transform: uppercase;
+      }
+    }
+
+    .teacher-info {
+      h3 {
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+        color: $text-dark;
+      }
+
+      .teacher-role {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: $primary-blue;
+        margin-bottom: 15px;
+      }
+
+      .teacher-desc {
+        font-size: 0.9rem;
+        color: $text-muted;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+    }
+
+    .teacher-footer {
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

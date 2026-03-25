@@ -1,0 +1,78 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.classes {
+  background: $bg-pastel-blue;
+
+  .classes-grid {
+    @include grid-layout(3, 30px);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .class-card {
+    background: #fff;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    @include soft-shadow;
+    @include card-hover;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+
+    .class-header {
+      padding: 30px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin: 0;
+      }
+
+      .sessions {
+        font-size: 0.9rem;
+        font-weight: 600;
+        opacity: 0.9;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 4px 12px;
+        border-radius: $radius-sm;
+        width: fit-content;
+      }
+    }
+
+    .class-body {
+      padding: 30px;
+      .detail {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: $text-dark;
+        margin-bottom: 12px;
+
+        .dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .class-footer {
+      padding: 0 30px 30px;
+      .btn {
+        width: 100%;
+        border-radius: $radius-md;
+      }
+    }
+  }
+}
